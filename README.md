@@ -1,2 +1,6 @@
 # JRUN-JRE-Runner
-A function to reduce the typing process to run a Java source code by terminal on Linux.
+A lightweight bash function to streamline Java execution on Linux.
+
+jrun eliminates the need to manually run javac and java separately. It handles the compilation and execution in a single command, even checking for file types.
+
+Usage: `jrun path/to/File.java`
