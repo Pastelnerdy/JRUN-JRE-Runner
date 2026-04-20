@@ -1,0 +1,16 @@
+# function that run's simple programs in java
+jrun() {
+    [ -z "$1" ] && { echo "jrun <FILE PATH>"; return }
+
+    clear
+
+    rm -rf "$1.class"
+
+    if ! java "$1" 2> /dev/shm/jrun_err.log; then
+        if javac "$1" 2> /dev/shm/jrun_err.log; then
+            java "${1%.java}"
+        else
+            cat /dev/shm/jrun_err.log
+        fi
+    fi
+}
