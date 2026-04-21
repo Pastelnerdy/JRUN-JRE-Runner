@@ -1,3 +1,5 @@
+# copy it to the source ~/.bashrc file
+
 # function that run's simple programs in java
 jrun() {
     [ -z "$1" ] && { echo "jrun <FILE PATH>"; return }
